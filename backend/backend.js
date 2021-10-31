@@ -16,8 +16,7 @@ app.get("/", async (req, res, next) => {
   } catch (error) {
     return next(error);
   }
-  // res.setHeader("error", "Could not find topic, error: " + error.message);
-  // return res.status(400).send();
+  // Creating a DOM in order to parse the html and find all the p tags
   const dom = new JSDOM({
     contentType: "text/html",
   });
